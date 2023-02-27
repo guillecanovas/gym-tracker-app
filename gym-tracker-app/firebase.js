@@ -1,8 +1,6 @@
-import { initializeApp } from 'firebase/app';
-
-// Optionally import the services that you want to use
-import "firebase/auth";
-import "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from 'firebase/firestore';
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -12,17 +10,9 @@ const firebaseConfig = {
     storageBucket: "gym-tracker-app-2affc.appspot.com",
     messagingSenderId: "356967580812",
     appId: "1:356967580812:web:b3d2ec28de1dfe806a27a9"
-  };
+};
 
-let app;
-
-if (firebase.apps.length === 0) {
-    app = initializeApp(firebaseConfig);
-} else {
-    app = firebase.app();
-}
-const db = app.firestore();
-const auth = firebase.auth();
-
-export { db, auth };
+const app = initializeApp(firebaseConfig);
+export const authentication = getAuth(app);
+export const db = getFirestore();
 

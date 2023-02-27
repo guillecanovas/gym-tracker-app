@@ -1,6 +1,7 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { HomeScreen, LoginScreen, RegisterScreen } from './screens'
+import useAuth from './hooks/useAuth'
 
 const Stack = createNativeStackNavigator();
 
@@ -12,8 +13,7 @@ const globalScreenOptions = {
 };
 
 const StackNavigator = () => {
-    //const { user } = useAuth();
-    const { user } = false;
+    const { user } = useAuth();
     
     return (
         <Stack.Navigator

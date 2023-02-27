@@ -1,16 +1,22 @@
 import { View } from 'react-native'
 import { KeyboardAvoidingView } from 'react-native'
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Button, Input, Text } from 'react-native-elements'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import useAuth from '../hooks/useAuth'
+
 
 const RegisterScreen = ({ navigation }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [imageUrl, setImageUrl] = useState('');
-    
-    const register = () => {}
+
+    const { registerUser } = useAuth();
+
+    const register = () => {
+        registerUser(name, email, password, imageUrl);
+    };
 
     return (
         
