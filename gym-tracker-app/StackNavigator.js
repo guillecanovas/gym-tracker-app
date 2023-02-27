@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { HomeScreen, LoginScreen, RegisterScreen } from './screens'
+import { HomeScreen, LoginScreen, RegisterScreen, ModalScreen } from './screens'
 import useAuth from './hooks/useAuth'
 
 const Stack = createNativeStackNavigator();
@@ -14,28 +14,21 @@ const globalScreenOptions = {
 
 const StackNavigator = () => {
     const { user } = useAuth();
+    console.log("🚀 ~ file: StackNavigator.js:17 ~ StackNavigator ~ user:", user)
     
     return (
         <Stack.Navigator
-            screenOptions={{
-                headerShown: false,
-            }}
+            screenOptions={ globalScreenOptions }
             >
             {user ? (
                 <>
                     <Stack.Group>
                         <Stack.Screen name="Home" component={HomeScreen} />
                         <Stack.Screen name="Register" component={RegisterScreen} />
-                        <Stack.Screen name="Profile" component={ProfileScreen} />
-                        <Stack.Screen name="Message" component={MessageScreen} />
                     </Stack.Group>
                     
                     <Stack.Group screenOptions={{ presentation: 'modal' }}>
                         <Stack.Screen name="Modal" component={ModalScreen} />
-                    </Stack.Group>
-
-                    <Stack.Group screenOptions={{ presentation: 'transparentModal' }}>
-                        <Stack.Screen name="Match" component={MatchScreen} />
                     </Stack.Group>
                 </>
             ) : (

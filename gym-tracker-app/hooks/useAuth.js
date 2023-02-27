@@ -6,11 +6,6 @@ const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
 
-    //const [loading, setLoading] = useState(false)
-    const [isSignedIn, setIsSignedIn] = useState(false)
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
     const [error, setError] = useState(null);
     const [user, setUser] = useState(null);
     const [loadingInitial, setLoadingInitial] = useState(true);
@@ -18,7 +13,7 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(
         () =>
-          onAuthStateChanged(authentication, user => {
+          onAuthStateChanged(authentication, (user) => {
             if (user) {
               //logged in..
               setUser(user);
@@ -30,7 +25,7 @@ export const AuthProvider = ({ children }) => {
         []
     );
 
-    const registerUser = (email, password) => {
+    const registerUser = (name, email, password, imageUrl) => {
         console.log("registrar usuario")
         createUserWithEmailAndPassword(authentication, email, password)
         .then(userCredentials => {
@@ -41,7 +36,10 @@ export const AuthProvider = ({ children }) => {
             });
             console.log('Registered with: ', user.email);
         })
-        .catch(err => setError(err))
+        .catch((err) => {
+          setError(err);
+          alert(err.message);
+        })
         .finally(() => setLoading(false));
     }
 
@@ -65,24 +63,24 @@ export const AuthProvider = ({ children }) => {
     };
 
     const memoedValue = useMemo(
-        () => ({
-          user,
-          loading,
-          signInUser,
-          registerUser,
-          logout,
-          error,
-        }),
-        [user, loading, error]
-      );
+      () => ({
+        user,
+        loading,
+        signInUser,
+        registerUser,
+        logout,
+        error,
+      }),
+      [user, loading, error]
+    );
 
     return (
-        <AuthContext.Provider 
-            value={memoedValue}
-        >
-            {!loadingInitial && children}
-        </AuthContext.Provider>
-    );
+      <AuthContext.Provider 
+          value={memoedValue}
+      >
+          {!loadingInitial && children}
+      </AuthContext.Provider>
+  );
 };
 
 export default function useAuth(){
