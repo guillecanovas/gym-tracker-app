@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { HomeScreen, LoginScreen } from './screens'
+import { HomeScreen, LoginScreen, RegisterScreen } from './screens'
 
 const Stack = createNativeStackNavigator();
 
@@ -25,7 +25,7 @@ const StackNavigator = () => {
                 <>
                     <Stack.Group>
                         <Stack.Screen name="Home" component={HomeScreen} />
-                        <Stack.Screen name="Chat" component={ChatScreen} />
+                        <Stack.Screen name="Register" component={RegisterScreen} />
                         <Stack.Screen name="Profile" component={ProfileScreen} />
                         <Stack.Screen name="Message" component={MessageScreen} />
                     </Stack.Group>
@@ -39,7 +39,10 @@ const StackNavigator = () => {
                     </Stack.Group>
                 </>
             ) : (
-                <Stack.Screen name="Login" component={LoginScreen} />
+                <Stack.Group>
+                    <Stack.Screen name="Login" component={LoginScreen} />
+                    <Stack.Screen name="Register" component={RegisterScreen} />
+                </Stack.Group>
             )}
             </Stack.Navigator>
     )
