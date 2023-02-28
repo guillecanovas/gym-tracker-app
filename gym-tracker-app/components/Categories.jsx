@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { View, Text, ScrollView } from 'react-native'
 import CategoryCard from './CategoryCard'
+import { useNavigation } from '@react-navigation/native'
 
 /* Estático */
 const workout_cats = [
