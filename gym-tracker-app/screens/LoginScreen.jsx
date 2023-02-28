@@ -38,7 +38,7 @@ const LoginScreen = () => {
               keyboardVerticalOffset={10}
             >
               <Image 
-                    source={require('../assets/logo.png')}
+                    source={require('../assets/logos/logo.png')}
                     className="w-48 h-48" 
                 />
                 <View className="w-72">

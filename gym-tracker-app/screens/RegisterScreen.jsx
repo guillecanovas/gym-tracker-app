@@ -61,13 +61,17 @@ const RegisterScreen = () => {
                                 type="text" 
                                 value={imageUrl} 
                                 onChangeText={(text) => setImageUrl(text)} 
-                                onSubmitEditing={() => register()}
+                                onSubmitEditing={() => 
+                                    register()
+                                }
                             />
                         </View>
 
                         <Button 
                             raised 
-                            onPress={() => register()}
+                            onPress={() => {
+                                register()
+                            }}
                             title="Register" 
                         />
                     </KeyboardAvoidingView> 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { HomeScreen, LoginScreen, RegisterScreen, ModalScreen } from './screens'
+import { HomeScreen, LoginScreen, RegisterScreen, ModalScreen, WorkoutScreen, ExerciseScreen, ProgressScreen, NotificationScreen } from './screens'
 import useAuth from './hooks/useAuth'
 
 const Stack = createNativeStackNavigator();
@@ -25,6 +25,10 @@ const StackNavigator = () => {
                     <Stack.Group>
                         <Stack.Screen name="Home" component={HomeScreen} />
                         <Stack.Screen name="Register" component={RegisterScreen} />
+                        <Stack.Screen name="Workout" component={WorkoutScreen} />
+                        <Stack.Screen name="Exercise" component={ExerciseScreen} />
+                        <Stack.Screen name="Progress" component={ProgressScreen} />
+                        <Stack.Screen name="Notifications" component={NotificationScreen} />
                     </Stack.Group>
                     
                     <Stack.Group screenOptions={{ presentation: 'modal' }}>
