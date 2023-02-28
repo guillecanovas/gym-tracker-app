@@ -1,23 +1,10 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import { Octicons } from '@expo/vector-icons';
-{ /* <Octicons name="home" size={24} color="black" /> */} 
 import { Feather } from '@expo/vector-icons';
-{ /* <Feather name="user" size={24} color="black" /> */}
-import { AntDesign } from '@expo/vector-icons';
-{ /* <AntDesign name="linechart" size={24} color="black" /> */}
 import { Ionicons } from '@expo/vector-icons';
-{ /* <Ionicons name="md-stats-chart-outline" size={24} color="black" /> */}
-import { FontAwesome5 } from '@expo/vector-icons';
-{ /* <FontAwesome5 name="dumbbell" size={24} color="black" /> */ }
-import { Entypo } from '@expo/vector-icons';
-{ /* <Entypo name="circle-with-plus" size={24} color="black" /> */ }
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
 import { useNavigation } from '@react-navigation/core'
-
-
 import React from 'react'
-
 
 const Navbar = () => {
 

@@ -7,8 +7,6 @@ import { getAuth, signOut, createUserWithEmailAndPassword, onAuthStateChanged, s
 import { authentication } from '../firebase';
 import { useNavigation } from '@react-navigation/core'
 
-
-
 const RegisterScreen = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -24,59 +22,59 @@ const RegisterScreen = () => {
 
     return (
         
-            <SafeAreaView className="flex-1 items-center justify-center p-2">
+        <SafeAreaView className="flex-1 items-center justify-center p-2">
 
-                { loading ? 
-                    <Text>
-                        Loading...
-                    </Text>
-                : 
-                    <KeyboardAvoidingView
-                            behavior={Platform.OS === "ios" ? "padding" : "height"}
-                            className="flex-1"
-                            keyboardVerticalOffset={10}
-                    >
-                        <Text h3 className="mb-12">Create your accont</Text>
-                        <View className="">
-                            <Input 
-                                placeholder='Full Name' 
-                                autoFocus type="text" 
-                                value={name} 
-                                onChangeText={(text) => setName(text)} 
-                            />
-                            <Input 
-                                placeholder='Email' 
-                                type="email" 
-                                value={email} 
-                                onChangeText={(text) => setEmail(text)} 
-                            />
-                            <Input 
-                                placeholder='Password'
-                                secureTextEntry
-                                value={password}
-                                onChangeText={(text) => setPassword(text)}
-                            />
-                            <Input 
-                                placeholder='Profile Picture URL (optional)' 
-                                type="text" 
-                                value={imageUrl} 
-                                onChangeText={(text) => setImageUrl(text)} 
-                                onSubmitEditing={() => 
-                                    register()
-                                }
-                            />
-                        </View>
-
-                        <Button 
-                            raised 
-                            onPress={() => {
-                                register()
-                            }}
-                            title="Register" 
+            { loading ? 
+                <Text>
+                    Loading...
+                </Text>
+            : 
+                <KeyboardAvoidingView
+                        behavior={Platform.OS === "ios" ? "padding" : "height"}
+                        className="flex-1"
+                        keyboardVerticalOffset={10}
+                >
+                    <Text h3 className="mb-12">Create your accont</Text>
+                    <View className="">
+                        <Input 
+                            placeholder='Full Name' 
+                            autoFocus type="text" 
+                            value={name} 
+                            onChangeText={(text) => setName(text)} 
                         />
-                    </KeyboardAvoidingView> 
-                }
-            </SafeAreaView>
+                        <Input 
+                            placeholder='Email' 
+                            type="email" 
+                            value={email} 
+                            onChangeText={(text) => setEmail(text)} 
+                        />
+                        <Input 
+                            placeholder='Password'
+                            secureTextEntry
+                            value={password}
+                            onChangeText={(text) => setPassword(text)}
+                        />
+                        <Input 
+                            placeholder='Profile Picture URL (optional)' 
+                            type="text" 
+                            value={imageUrl} 
+                            onChangeText={(text) => setImageUrl(text)} 
+                            onSubmitEditing={() => 
+                                register()
+                            }
+                        />
+                    </View>
+
+                    <Button 
+                        raised 
+                        onPress={() => {
+                            register()
+                        }}
+                        title="Register" 
+                    />
+                </KeyboardAvoidingView> 
+            }
+        </SafeAreaView>
     )
 }
 

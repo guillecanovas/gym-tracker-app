@@ -100,6 +100,7 @@ const WorkoutScreen = () => {
             </TouchableOpacity>
         </View>
 
+        {/* Navbar */}
         <View>
             <Navbar />
         </View>

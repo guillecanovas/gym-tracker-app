@@ -1,4 +1,4 @@
-import { View, Text, KeyboardAvoidingView } from 'react-native'
+import { View, Text, KeyboardAvoidingView, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { Button, Input, Image } from 'react-native-elements';
 import { SafeAreaView } from 'react-native-safe-area-context'
