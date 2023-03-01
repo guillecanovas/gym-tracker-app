@@ -24,7 +24,6 @@ const StackNavigator = () => {
                     <Stack.Group>
                         <Stack.Screen name="Home" component={HomeScreen} />
                         <Stack.Screen name="Register" component={RegisterScreen} />
-                        <Stack.Screen name="Workout" component={WorkoutScreen} />
                         <Stack.Screen name="Exercise" component={ExerciseScreen} />
                         <Stack.Screen name="Progress" component={ProgressScreen} />
                         <Stack.Screen name="Notifications" component={NotificationScreen} />
