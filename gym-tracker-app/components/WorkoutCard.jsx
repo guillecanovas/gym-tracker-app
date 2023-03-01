@@ -2,14 +2,14 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/core'
 
-const ExerciseCard = ({ name, image }) => {
+const WorkoutCard = ({ name, image }) => {
     
   const navigation = useNavigation();
 
   return (
     <TouchableOpacity 
         className="p-12 bg-gray-100 rounded-xl flex-row items-center justify-between mt-3 mx-4"
-        onPress={() => navigation.navigate("Set", {
+        onPress={() => navigation.navigate("Exercise", {
             title: name,
         })}
     >
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
   });
   
 
-export default ExerciseCard;
+export default WorkoutCard;

@@ -34,7 +34,6 @@ export const AuthProvider = ({ children }) => {
         .then(()=> {
             //const user = authUser.user;
             const user = authentication.currentUser.email;
-            console.log("Usuario registrado es: " + user);
             updateProfile(authentication.currentUser, {
                 displayName: name,
                 photoURL: imageUrl || "https://cencup.com/wp-content/uploads/2019/07/avatar-placeholder.png",

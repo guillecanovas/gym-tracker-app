@@ -3,10 +3,9 @@ import { View, Text, Image, TextInput } from 'react-native'
 import useAuth from '../hooks/useAuth';
 import { useFonts } from 'expo-font';
 
-const HomeHeader = ({ bgcolor }) => {
+const HomeHeader = ({ bgcolor, description }) => {
 
   const { user } = useAuth();
-  console.log(user);
 
   return (
     <View style={{
@@ -33,7 +32,7 @@ const HomeHeader = ({ bgcolor }) => {
             </Text>
 
             <Text style={{ fontFamily: "InterBold", fontSize: 16, color: "#FFF", marginTop: 4 }}>
-                Have a great session!
+                { description ? description : "Have a great session!"}
                 {/* estatico */}
             </Text>
         </View>

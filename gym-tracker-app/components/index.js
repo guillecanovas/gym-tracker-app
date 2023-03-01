@@ -4,5 +4,6 @@ import HomeHeader from './HomeHeader'
 import SetCard from './SetCard'
 import Categories from './Categories'
 import ExerciseCard from './ExerciseCard'
+import WorkoutCard from './WorkoutCard'
 
-export { Header, Navbar, HomeHeader, SetCard, Categories, ExerciseCard }
+export { Header, Navbar, HomeHeader, SetCard, Categories, ExerciseCard, WorkoutCard }

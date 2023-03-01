@@ -7,5 +7,6 @@ import ExerciseScreen from './ExerciseScreen'
 import ProgressScreen from './ProgressScreen'
 import NotificationScreen from './NotificationScreen'
 import ProfileScreen from './ProfileScreen'
+import SetScreen from './SetScreen'
 
-export { HomeScreen, LoginScreen, RegisterScreen, ModalScreen, WorkoutScreen, ExerciseScreen, ProgressScreen, NotificationScreen, ProfileScreen }
+export { HomeScreen, LoginScreen, RegisterScreen, ModalScreen, WorkoutScreen, ExerciseScreen, ProgressScreen, NotificationScreen, ProfileScreen, SetScreen }

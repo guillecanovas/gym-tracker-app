@@ -5,7 +5,8 @@ import { EvilIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { ExerciseCard, Navbar } from '../components'
 import { COLORS } from '../assets/constants/theme';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
+
 
 /* Estático */
 const exercises = [
@@ -49,17 +50,21 @@ const exercises = [
 const ExerciseScreen = () => {
 
   const navigation = useNavigation();
+  const route = useRoute();
+  const title = route.params.title;
+  const modTitle = title + " Day"
 
   return (
     <View className="flex-1 bg-white">
-        <HomeHeader bgcolor={COLORS.primary} />
+        {/*<HomeHeader bgcolor={COLORS.primary} />*/}
+        <Header title={modTitle}/>
 
         {/* Buscador */}
         <View className="flex-row items-center mt-4 -mb-2 space-x-2 pb-2 mx-4">
             <View className="flex-row flex-1 space-x-2 bg-gray-200 p-3 rounded-lg">
                 <EvilIcons name="search" size={28} color="grey" />
                 <TextInput 
-                    placeholder="What are you training today?"
+                    placeholder="Search your exercise"
                     keyboardType="default"
                 />
             </View>
@@ -83,18 +88,7 @@ const ExerciseScreen = () => {
             ))}
         </ScrollView>
 
-        {/* Footer */}
-        <View className="p-5 bg-white space-y-4">
-            {/* Add Set */}
-            <TouchableOpacity 
-                onPress={() => navigation.navigate("Workout")}
-                className="rounded-full bg-[#001F2D] shadow-xl py-4 -mb-2"
-            >
-                <Text className="text-center text-white text-lg ">
-                    Start Exercise
-                </Text>
-            </TouchableOpacity>
-        </View>
+        
 
         {/* Navbar */}
         <View>
