@@ -3,6 +3,7 @@ import { Octicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 
@@ -27,9 +28,9 @@ const Navbar = () => {
           <Text>Progress</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity className="flex-col items-center justify-center" onPress={() => navigation.navigate("Notifications")} >
-          <MaterialCommunityIcons className="mb-1 self-center" name="bell-badge" size={24} color="black" />
-          <Text>Notifications</Text>
+        <TouchableOpacity className="flex-col items-center justify-center" onPress={() => navigation.navigate("Workouts")} >
+          <AntDesign className="mb-1 self-center" name="calendar" size={25} color="black" />
+          <Text>Workouts</Text>
         </TouchableOpacity>
 
         <TouchableOpacity className="flex-col items-center justify-center" onPress={() => navigation.navigate("Profile")} >
