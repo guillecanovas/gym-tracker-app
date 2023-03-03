@@ -10,7 +10,7 @@ import { Feather } from '@expo/vector-icons';
 import { Avatar, Title, Caption, Text, TouchableRipple } from 'react-native-paper';
 const ProfileScreen = () => {
   const navigation = useNavigation();
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
 
   return (
     <SafeAreaView className="flex-1 bg-white">
@@ -47,23 +47,25 @@ const ProfileScreen = () => {
                 <Text style={styles.menuItemText}>Your Favorites</Text>
               </View>
             </TouchableRipple>
-            
-            <TouchableRipple onPress={() => {}}>
-              <View style={styles.menuItem}>
-                <MaterialCommunityIcons name="share-outline" color="#FF6347" size={25} />
-                <Text style={styles.menuItemText}>Tell Your Friends</Text>
-              </View>
-            </TouchableRipple>
+
             <TouchableRipple onPress={() => {}}>
               <View style={styles.menuItem}>
                 <MaterialCommunityIcons name="account-check-outline" color="#FF6347" size={25} />
                 <Text style={styles.menuItemText}>Support</Text>
               </View>
             </TouchableRipple>
+            
             <TouchableRipple onPress={() => {}}>
               <View style={styles.menuItem}>
                 <Feather name="settings" size={25} color="#FF6347" />
                 <Text style={styles.menuItemText}>Settings</Text>
+              </View>
+            </TouchableRipple>
+
+            <TouchableRipple onPress={logout}>
+              <View style={styles.menuItem}>
+                <MaterialCommunityIcons name="share-outline" color="#FF6347" size={25} />
+                <Text style={styles.menuItemText}>Log out</Text>
               </View>
             </TouchableRipple>
           </View>
