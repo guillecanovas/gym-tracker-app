@@ -6,5 +6,7 @@ import ExerciseCard from './ExerciseCard'
 import WorkoutCard from './WorkoutCard'
 import InputField from './InputField'
 import CustomTextInput from './CustomTextInput'
+import ChartLabel from './ChartLabel'
+import ChartCard from './ChartCard'
 
-export { Header, Navbar, HomeHeader, SetCard, ExerciseCard, WorkoutCard, InputField, CustomTextInput }
+export { Header, Navbar, HomeHeader, SetCard, ExerciseCard, WorkoutCard, InputField, CustomTextInput, ChartLabel, ChartCard }

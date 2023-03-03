@@ -4,52 +4,9 @@ import { Header, HomeHeader } from '../components'
 import { SetCard, Navbar } from '../components'
 import { COLORS } from '../assets/constants/theme';
 import { useRoute } from '@react-navigation/native';
-
+import { sets } from '../assets/constants/dummyData';
 /* Estático */
-const sets = [
-    {
-        id: 1,
-        number: 1,
-        reps:7,
-        weight: 55,
-    },
-    {
-        id: 2,
-        number: 2,
-        reps:3,
-        weight: 100,
-    },
-    {
-        id: 3,
-        number: 3,
-        reps:7,
-        weight: 80,
-    },
-    {
-        id: 4,
-        number: 4,
-        reps: 6,
-        weight: 30,
-    }, 
-    {
-        id: 5,
-        number: 5,
-        reps:3,
-        weight: 100,
-    },
-    {
-        id: 6,
-        number: 6,
-        reps:7,
-        weight: 80,
-    },
-    {
-        id: 7,
-        number: 7,
-        reps: 6,
-        weight: 30,
-    }
-]
+
 
 const SetScreen = () => {
 

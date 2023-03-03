@@ -4,48 +4,11 @@ import { HomeHeader, Navbar, WorkoutCard } from '../components'
 import { useNavigation } from '@react-navigation/native'
 import useAuth from '../hooks/useAuth'
 import { COLORS } from '../assets/constants/theme';
-import { EvilIcons } from '@expo/vector-icons'; 
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-
+import { EvilIcons, MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { default_workouts } from '../assets/constants/dummyData'
 
 /* Estático */
-const workouts = [
-    {
-        id: 1,
-        name: "Push",
-        image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png"
-    },
-    {
-        id: 2,
-        name: "Pull",
-        image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png"
-    },
-    {
-        id: 3,
-        name: "Legs",
-        image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png"
-    },
-    {
-        id: 4,
-        name: "Arms",
-        image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png"
-    }, 
-    {
-        id: 5,
-        name: "Shoulders",
-        image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png"
-    },
-    {
-        id: 6,
-        name: "Glutes",
-        image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png"
-    },
-    {
-        id: 7,
-        name: "Abs",
-        image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png"
-    }
-]
+const workouts = default_workouts;
 
 const HomeScreen = () => {
 

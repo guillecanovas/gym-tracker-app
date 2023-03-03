@@ -8,59 +8,9 @@ import DatePicker from "react-native-modern-datepicker"
 import { getToday, getFormatedDate } from 'react-native-modern-datepicker'
 import { AntDesign } from '@expo/vector-icons';
 import { EvilIcons, MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { workouts } from '../assets/constants/dummyData';
 
 /* Estático */
-const workouts = [
-  {
-      id: 1,
-      name: "Push",
-      image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png",
-      date: "2023/03/05",
-  },
-  {
-    id: 2,
-    name: "Pull",
-    image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png",
-    date: "2023/03/06",
-  },
-  {
-    id: 3,
-    name: "Legs",
-    image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png",
-    date: "2023/03/07",
-  },
-  {
-    id: 4,
-    name: "Abs",
-    image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png",
-    date: "2023/03/06",
-  },
-  {
-    id: 5,
-    name: "Arms",
-    image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png",
-    date: "2023/03/06",
-  },
-  {
-    id: 6,
-    name: "Glutes",
-    image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png",
-    date: "2023/03/06",
-  },
-  {
-    id: 7,
-    name: "Shoulders",
-    image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png",
-    date: "2023/03/06",
-  },
-  {
-    id: 8,
-    name: "Cardio",
-    image: "https://static.vecteezy.com/system/resources/previews/011/319/007/original/gym-and-fitness-logo-png.png",
-    date: "2023/03/06",
-  },
-  
-]
 
 const WorkoutsScreen = () => {
   const navigation = useNavigation();
