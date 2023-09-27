@@ -18,14 +18,34 @@ The Weightlifting Tracker App is a React Native application designed to help use
 
 ## Screenshots
 
-![Screenshot 1](screenshots/1.png)
-![Screenshot 2](screenshots/2.png)
-![Screenshot 3](screenshots/3.png)
-![Screenshot 4](screenshots/4.png)
-![Screenshot 5](screenshots/5.png)
-![Screenshot 6](screenshots/6.png)
-![Screenshot 7](screenshots/7.png)
-![Screenshot 8](screenshots/8.png)
-![Screenshot 9](screenshots/9.png)
-![Screenshot 10](screenshots/10.png)
+<!-- Primera fila -->
+<div style="display: flex; justify-content: space-between;">
+    <img src="screenshots/1.png" alt="Screenshot 1" width="400" height="300">
+    <img src="screenshots/2.png" alt="Screenshot 2" width="400" height="300">
+</div>
+
+<!-- Segunda fila -->
+<div style="display: flex; justify-content: space-between;">
+    <img src="screenshots/3.png" alt="Screenshot 3" width="400" height="300">
+    <img src="screenshots/4.png" alt="Screenshot 4" width="400" height="300">
+</div>
+
+<!-- Tercera fila -->
+<div style="display: flex; justify-content: space-between;">
+    <img src="screenshots/5.png" alt="Screenshot 5" width="400" height="300">
+    <img src="screenshots/6.png" alt="Screenshot 6" width="400" height="300">
+</div>
+
+<!-- Cuarta fila -->
+<div style="display: flex; justify-content: space-between;">
+    <img src="screenshots/7.png" alt="Screenshot 7" width="400" height="300">
+    <img src="screenshots/8.png" alt="Screenshot 8" width="400" height="300">
+</div>
+
+<!-- Quinta fila -->
+<div style="display: flex; justify-content: space-between;">
+    <img src="screenshots/9.png" alt="Screenshot 9" width="400" height="300">
+    <img src="screenshots/10.png" alt="Screenshot 10" width="400" height="300">
+</div>
+
 
