@@ -43,28 +43,28 @@ const ProfileScreen = () => {
           <View style={styles.menuWrapper}>
             <TouchableRipple onPress={() => {}}>
               <View style={styles.menuItem}>
-                <MaterialCommunityIcons name="heart-outline" color="#FF6347" size={25} />
+                <MaterialCommunityIcons name="heart-outline" color="black" size={25} />
                 <Text style={styles.menuItemText}>Your Favorites</Text>
               </View>
             </TouchableRipple>
 
             <TouchableRipple onPress={() => {}}>
               <View style={styles.menuItem}>
-                <MaterialCommunityIcons name="account-check-outline" color="#FF6347" size={25} />
+                <MaterialCommunityIcons name="account-check-outline" color="black" size={25} />
                 <Text style={styles.menuItemText}>Support</Text>
               </View>
             </TouchableRipple>
             
             <TouchableRipple onPress={() => {}}>
               <View style={styles.menuItem}>
-                <Feather name="settings" size={25} color="#FF6347" />
+                <Feather name="settings" size={25} color="black" />
                 <Text style={styles.menuItemText}>Settings</Text>
               </View>
             </TouchableRipple>
 
             <TouchableRipple onPress={logout}>
               <View style={styles.menuItem}>
-                <MaterialCommunityIcons name="share-outline" color="#FF6347" size={25} />
+                <MaterialCommunityIcons name="share-outline" color="black" size={25} />
                 <Text style={styles.menuItemText}>Log out</Text>
               </View>
             </TouchableRipple>
